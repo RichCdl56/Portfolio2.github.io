@@ -1,0 +1,484 @@
+/* Portfolio CSS Richard Cdl*/
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --black: black;
+  --white: #fff;
+}
+.dark {
+  --black: #fff;
+  --white: black;
+}
+section {
+  padding: 100px;
+}
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+}
+header .logo {
+  position: relative;
+  display: inline-flex;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--black);
+}
+.righSide {
+  display: flex;
+}
+.btns {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+  background: var(--black);
+}
+.btns ion-icon {
+  font-size: 1.5em;
+  color:var(--white);
+}
+.btns.menuToggle ion-icon {
+  font-size: 3em;
+}
+.btns ion-icon:nth-child(2) {
+  display: none;
+}
+.btns.active ion-icon:nth-child(2) {
+  display: block;
+}
+.btns.active ion-icon:nth-child(1) {
+  display: none;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 860px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--white);
+  z-index: 4;
+  transition: 0.5s;
+}
+.navigation.active {
+  left: 0;
+}
+.navigation li {
+  list-style: none;
+}
+.navigation li a {
+  display: inline-flex;
+  margin: 5px 0;
+  font-size: 1.35em;
+  text-decoration: none;
+  color: var(--black);
+  padding: 5px 20px;
+  border-radius: 40px;
+}
+.navigation li a:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color:  var(--white);
+}
+  .heading.white {
+  color: var(--black);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact
+{
+    background: var(--black);
+}
+.formBx
+{
+    min-width: 60%;
+}
+.formBx form
+{
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h2,
+.contactInfo h2
+{
+    color:var(--white);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea
+{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color:var(--white);
+    resize: none;
+}
+.formBx form textarea
+{
+    min-height: 200px;
+}
+.formBx form input::placeholder,
+.formBx form textarea::placeholder
+{
+    color: #999;
+}
+.formBx form input[type="submit"]
+{
+    max-width: 100px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.contactInfo
+{
+    min-width: 40%;
+}
+.contactInfoBx
+{
+    position: relative;
+}
+.contactInfoBx .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactInfoBx .box .icon
+{
+    min-width: 40px;
+    padding-top: 4px;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+.contactInfoBx .box .text 
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:var(--white);
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactInfoBx .box .text h2
+{
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+.copyright {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+.copyright .sci {
+  text-align: center;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+}
+.copyright .sci li {
+  list-style: none;
+}
+.copyright .sci li a {
+  text-decoration: none;
+  margin: 0 20px;
+}
+.copyright .sci li a img {
+  filter: invert(1);
+  max-width: 40px;
+}
+.button {
+  --primary: #275efe;
+  --primary-dark: #2055ee;
+  --primary-darkest: #133fc0;
+  --text: #fff;
+  --text-opacity: 1;
+  --success: #2b3044;
+  --success-scale: 0.2;
+  --success-opacity: 0;
+  --border-radius: 7;
+  --overflow: hidden;
+  --rotate: 0;
+  --plane-x: 0;
+  --plane-y: 0;
+  --plane-opacity: 1;
+  --left-wing-background: var(--primary);
+  --left-wing-first-x: 0;
+  --left-wing-first-y: 0;
+  --left-wing-second-x: 50;
+  --left-wing-second-y: 0;
+  --left-wing-third-x: 0;
+  --left-wing-third-y: 100;
+  --left-body-background: var(--primary);
+  --left-body-first-x: 50;
+  --left-body-first-y: 0;
+  --left-body-second-x: 50;
+  --left-body-second-y: 100;
+  --left-body-third-x: 0;
+  --left-body-third-y: 100;
+  --right-wing-background: var(--primary);
+  --right-wing-first-x: 50;
+  --right-wing-first-y: 0;
+  --right-wing-second-x: 100;
+  --right-wing-second-y: 0;
+  --right-wing-third-x: 100;
+  --right-wing-third-y: 100;
+  --right-body-background: var(--primary);
+  --right-body-first-x: 50;
+  --right-body-first-y: 0;
+  --right-body-second-x: 50;
+  --right-body-second-y: 100;
+  --right-body-third-x: 100;
+  --right-body-third-y: 100;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  border: 0;
+  padding: 8px 0;
+  max-width: 100px;
+  text-align: center;
+  margin: 0;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  background: none;
+  outline: none;
+  color: var(--text);
+  -webkit-transform: rotate(calc(var(--rotate) * 1deg)) translateZ(0);
+  transform: rotate(calc(var(--rotate) * 1deg)) translateZ(0);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.button .left,
+.button .right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: var(--plane-opacity);
+  -webkit-transform: translate(
+      calc(var(--plane-x) * 1px),
+      calc(var(--plane-y) * 1px)
+    )
+    translateZ(0);
+  transform: translate(calc(var(--plane-x) * 1px), calc(var(--plane-y) * 1px))
+    translateZ(0);
+}
+.button .left:before,
+.button .left:after,
+.button .right:before,
+.button .right:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: calc(var(--border-radius) * 1px);
+  -webkit-transform: translate(var(--x, 0.4%), var(--y, 0)) translateZ(0);
+  transform: translate(var(--x, 0.4%), var(--y, 0)) translateZ(0);
+  z-index: var(--z-index, 2);
+  background: var(--background, var(--left-wing-background));
+  -webkit-clip-path: polygon(
+    calc(var(--first-x, var(--left-wing-first-x)) * 1%)
+      calc(var(--first-y, var(--left-wing-first-y)) * 1%),
+    calc(var(--second-x, var(--left-wing-second-x)) * 1%)
+      calc(var(--second-y, var(--left-wing-second-y)) * 1%),
+    calc(var(--third-x, var(--left-wing-third-x)) * 1%)
+      calc(var(--third-y, var(--left-wing-third-y)) * 1%)
+  );
+  clip-path: polygon(
+    calc(var(--first-x, var(--left-wing-first-x)) * 1%)
+      calc(var(--first-y, var(--left-wing-first-y)) * 1%),
+    calc(var(--second-x, var(--left-wing-second-x)) * 1%)
+      calc(var(--second-y, var(--left-wing-second-y)) * 1%),
+    calc(var(--third-x, var(--left-wing-third-x)) * 1%)
+      calc(var(--third-y, var(--left-wing-third-y)) * 1%)
+  );
+}
+.button .left:after {
+  --x: 0;
+  --z-index: 1;
+  --background: var(--left-body-background);
+  --first-x: var(--left-body-first-x);
+  --first-y: var(--left-body-first-y);
+  --second-x: var(--left-body-second-x);
+  --second-y: var(--left-body-second-y);
+  --third-x: var(--left-body-third-x);
+  --third-y: var(--left-body-third-y);
+}
+.button .right:before {
+  --x: -0.4%;
+  --z-index: 2;
+  --background: var(--right-wing-background);
+  --first-x: var(--right-wing-first-x);
+  --first-y: var(--right-wing-first-y);
+  --second-x: var(--right-wing-second-x);
+  --second-y: var(--right-wing-second-y);
+  --third-x: var(--right-wing-third-x);
+  --third-y: var(--right-wing-third-y);
+}
+.button .right:after {
+  --x: 0;
+  --z-index: 1;
+  --background: var(--right-body-background);
+  --first-x: var(--right-body-first-x);
+  --first-y: var(--right-body-first-y);
+  --second-x: var(--right-body-second-x);
+  --second-y: var(--right-body-second-y);
+  --third-x: var(--right-body-third-x);
+  --third-y: var(--right-body-third-y);
+}
+.button span {
+  display: block;
+  position: relative;
+  z-index: 4;
+  opacity: var(--text-opacity);
+}
+.button span.success {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  -webkit-transform: rotate(calc(var(--rotate) * -1deg))
+    scale(var(--success-scale)) translateZ(0);
+  transform: rotate(calc(var(--rotate) * -1deg)) scale(var(--success-scale))
+    translateZ(0);
+  opacity: var(--success-opacity);
+  color: var(--success);
+}
+
+.next_anim {
+  animation: next 600ms ease;
+  pointer-events: none;
+}
+.prev_anim {
+  animation: prev 600ms ease;
+  pointer-events: none;
+}
+@keyframes next {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+  50% {
+    left: 300px;
+    opacity: 0;
+  }
+  50.1% {
+    left: -300px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes prev {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+  50% {
+    left: -300px;
+    opacity: 0;
+  }
+  50.1% {
+    left: 300px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
+  }
+  40% {
+    box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
+  }
+  60% {
+    box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
+  }
+  80% {
+    box-shadow: 0 0 100px #0f0, inset 0 0 100px #0f0;
+  }
+  100% {
+    box-shadow: 0 0 50px #0f0, inset 0 0 50px #0f0;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 885px) {
+  .content {
+    flex-direction: column;
+
+  }
+}
+
+
+@media (max-width: 768px) {
+  *{
+    padding: 0;
+    left: 0;
+  }
+  .content {
+    flex-direction: column;
+  }
+}

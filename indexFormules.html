@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formules</title>
+    <link rel="stylesheet" href="appFormules.css">
+</head>
+<body>
+    <header>
+        <a href="https://github.com/RichCdl56" class="logo">R.CDL</a>
+        <div class="righSide">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class = container>
+            <div class = card1>
+              <div class = image>
+                <img href = "#" src = https://designmodo.com/wp-content/uploads/2014/03/FaceScan-app-concept.gif>
+              </div>
+              <div class = content>
+                <h3>APPLICATIONS</h3>
+                <p>Games - Applications - Training </p>
+              </div>
+            </div>    
+            <div class = card1>
+              <div class = image>
+                <img href = "#" src = https://i.gifer.com/DXKi.gif>
+              </div>
+              <div class = content>
+                <h3>WEBSITES</h3>
+                <p>Fully Responsive Websites</p>
+              </div>
+            </div>    
+          </div>
+          <div class="footer">
+          </div>
+        <p class="copyrightText">Richard Cordelle</p>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/RichCdl/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com/CordelleRichard"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/rich_cdl/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/richard-cordelle/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+    </section>
+
+    <!-- Sidebar Navigation -->
+    <ul class="navigation">
+        <li><a href="http://127.0.0.1:5501/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5501/indexAPropos.html">About</a></li>
+        <li><a href="http://127.0.0.1:5501/indexFormules.html">Work</a></li>
+        <li><a href="http://127.0.0.1:5501/indexContact.html">Contact</a></li>
+    </ul>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+
+        dayNight.onclick = function(){
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
